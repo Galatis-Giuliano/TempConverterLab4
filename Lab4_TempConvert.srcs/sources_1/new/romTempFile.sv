@@ -3,7 +3,7 @@
 module romTempFile(
     input logic clk,
     input logic [8:0] addr,
-    output logic [7:0] data
+    output logic [7:0] tempOut
     );
     
     logic [7:0] rom [0:281];
@@ -12,6 +12,6 @@ module romTempFile(
         $readmemb("temp_data.mem",rom);
     
     always_ff @(posedge clk)
-        data <= rom[addr];
+        tempOut <= rom[addr];
     
 endmodule

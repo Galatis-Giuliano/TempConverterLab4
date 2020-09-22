@@ -21,9 +21,9 @@ module SIM();
     
     initial
     begin
-        format = 1; tempIn = 8'b11111111;
+        format = 1; tempIn = 8'b01100011;
         
-        //#10 binary = 8'b00001111;
+        #10 format = 0; tempIn = 8'b01100011;
     
     end
 
